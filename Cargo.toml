@@ -2,6 +2,9 @@
 name = "param-opt"
 version = "0.1.0"
 edition = "2021"
+description = "Parameter optimization"
+license = "MIT"
+repository = "https://github.com/Banyc/param-opt"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
