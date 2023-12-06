@@ -10,6 +10,7 @@ pub struct Strings {
 }
 
 impl Strings {
+    /// Return [None] if `values` are empty
     pub fn new(values: Vec<String>) -> Option<Self> {
         if values.is_empty() {
             return None;

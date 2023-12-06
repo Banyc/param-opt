@@ -8,8 +8,8 @@ pub struct GridSearch {
 impl GridSearch {
     pub fn new(parameter_spaces: impl Iterator<Item = NonZeroUsize>) -> Self {
         let mut iterators = vec![];
-        for p in parameter_spaces {
-            let range = 0..p.get();
+        for space in parameter_spaces {
+            let range = 0..space.get();
             iterators.push(range);
         }
         let cartesian_product = iterators.into_iter().multi_cartesian_product();
