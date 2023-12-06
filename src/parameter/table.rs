@@ -5,6 +5,7 @@ use super::{
     ParameterSpace,
 };
 
+#[derive(Debug, Clone, PartialEq)]
 pub struct ParameterTable {
     named: HashMap<String, ParameterDataset>,
     vectored: Arc<[String]>,

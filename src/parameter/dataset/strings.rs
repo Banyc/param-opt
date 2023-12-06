@@ -4,7 +4,7 @@ use serde::Deserialize;
 
 use super::{Parameter, ParameterSpace};
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Deserialize)]
 pub struct Strings {
     values: Vec<String>,
 }

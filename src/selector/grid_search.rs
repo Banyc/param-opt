@@ -2,6 +2,7 @@ use std::{num::NonZeroUsize, ops::Range};
 
 use itertools::{Itertools, MultiProduct};
 
+#[derive(Debug, Clone)]
 pub struct GridSearch {
     cartesian_product: MultiProduct<Range<usize>>,
 }

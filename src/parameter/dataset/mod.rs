@@ -1,11 +1,15 @@
 use std::{fmt, num::NonZeroUsize};
 
+use serde::Deserialize;
+
 use self::strings::Strings;
 
 use super::{Parameter, ParameterSpace};
 
 pub mod strings;
 
+#[derive(Debug, Clone, PartialEq, Deserialize)]
+#[serde(tag = "type", rename_all = "snake_case")]
 pub enum ParameterDataset {
     Strings(Strings),
 }
