@@ -23,6 +23,15 @@ impl Iterator for GridSearch {
     fn next(&mut self) -> Option<Self::Item> {
         self.cartesian_product.next()
     }
+    fn count(self) -> usize {
+        self.cartesian_product.count()
+    }
+    fn size_hint(&self) -> (usize, Option<usize>) {
+        self.cartesian_product.size_hint()
+    }
+    fn last(self) -> Option<Self::Item> {
+        self.cartesian_product.last()
+    }
 }
 
 #[cfg(test)]
