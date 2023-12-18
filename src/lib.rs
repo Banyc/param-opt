@@ -30,7 +30,7 @@ mod tests {
             Strings::new(["1", "2"].into_iter().map(ToString::to_string).collect()).unwrap(),
         );
         datasets.insert(String::from("world"), dataset);
-        let table = ParameterTable::new(datasets);
+        let table = ParameterTable::new_unordered(datasets);
 
         let grid_search = GridSearch::new(table.spaces());
         for indices in grid_search {

@@ -29,7 +29,7 @@ fn main() -> anyhow::Result<()> {
     tera.add_raw_template(TEMPLATE_NAME, TEMPLATE_CONTENT)?;
 
     let parameter_table: HashMap<String, ParameterDataset> = toml::from_str(PARAMETER_TABLE)?;
-    let parameter_table = ParameterTable::new(parameter_table);
+    let parameter_table = ParameterTable::new_unordered(parameter_table);
 
     let grid_search = GridSearch::new(parameter_table.spaces());
     for indices in grid_search {

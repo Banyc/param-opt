@@ -1,6 +1,6 @@
 [package]
 name = "param-opt"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 description = "Parameter optimization"
 license = "MIT"
@@ -11,6 +11,7 @@ repository = "https://github.com/Banyc/param-opt"
 [dependencies]
 itertools = "0.12"
 serde = { version = "1", features = ["derive"] }
+thiserror = "1.0.51"
 
 [dev-dependencies]
 anyhow = "1"
